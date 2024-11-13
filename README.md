@@ -146,18 +146,17 @@ Install the necessary dependencies:
 npm install
 ```
 
-### 4. Set up the environment variables
-Create a `.env` file in the root directory or copy `.env.example` to `.env` and modify the settings according to your configuration.
+### 4. Set up the database connection
+Instead of using an .env file, modify the db.mjs file to configure your database connection string.
 
-Here is an example of the required environment variables:
+Here is the template format for your PostgreSQL connection:
 
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=your-db-username
-DB_PASSWORD=your-db-password
-DB_NAME=your-db-name
+```js
+postgresql://<your-db-username>:<your-db-password>@localhost:5432/<your-db-name>
 ```
+Replace <your-db-username>, <your-db-password>, and <your-db-name> with your PostgreSQL database credentials.
+
+Once updated, the application will use the connection string from db.mjs to connect to your PostgreSQL database.
 
 ### 5. Set up the database
 Set up PostgreSQL and create a database for the application:
