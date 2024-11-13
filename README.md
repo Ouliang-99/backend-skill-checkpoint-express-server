@@ -154,7 +154,8 @@ Here is the template format for your PostgreSQL connection:
 ```js
 postgresql://<your-db-username>:<your-db-password>@localhost:5432/<your-db-name>
 ```
-Replace <your-db-username>, <your-db-password>, and <your-db-name> with your PostgreSQL database credentials.
+
+Replace your-db-username, your-db-password, and your-db-name with your PostgreSQL database credentials.
 
 Once updated, the application will use the connection string from db.mjs to connect to your PostgreSQL database.
 
